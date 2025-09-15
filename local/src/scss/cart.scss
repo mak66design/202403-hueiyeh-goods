@@ -829,16 +829,33 @@ $product_color_5: #e30400;
                 .discount_coupon {
                     position: absolute;
                     top: 50%;
-                    right: -140px;
+                    // right: -140px;
+                    // right: -11em;
+                    left: calc(100% + 20px);
                     transform: translate(0, -50%);
                     color: #c98b54;
                     font-size: 16px;
                     font-weight: 500;
+                    // width: 9.5em;
+                    width: 100%;
+                    @include mediaquery(null, 1465px) {
+                        width: 70%;
+                    }
+                    @include mediaquery(null, 1370px) {
+                        width: 45%;
+                    }
+                    @include mediaquery(1100px, 1370px) {
+                        font-size: 14px;
+                    }
+                    @include mediaquery(null, 1170px) {
+                        width: 35%;
+                    }
                     @include mediaquery(null, 1100px) {
                         position: relative;
                         margin-top: 10px;
                         right: 0;
                         left: 11px;
+                        width: 100%;
                         transform: translate(0, 0);
                     }
                 }

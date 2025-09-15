@@ -275,7 +275,8 @@
                                 <div class="discount_item">使用折扣碼</div>
                                 <div class="input">
                                     <input type="text" id="discount" name="discount" />
-                                    <div class="discount_coupon">88HAPPY折價券</div>
+                                    <!-- <div class="discount_coupon">88HAPPY折價券</div> -->
+                                    <div class="discount_coupon">5085-100活動名稱</div>
                                 </div>
                             </li>
                             <li>
