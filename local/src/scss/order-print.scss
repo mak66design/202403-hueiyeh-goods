@@ -1,0 +1,256 @@
+@import "base/mixin";
+@import "base/variable";
+
+$product_color_1: #f9ede2;
+$product_color_2: #797979;
+$product_color_3: #94693c;
+$product_color_4: #e4e4e4;
+$product_color_5: #e30400;
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    width: 100%;
+}
+
+main{
+    width: 90%;
+    margin:40px auto;
+}
+.header-info{
+    display: flex;  
+    position: relative;  
+    > div{
+        display: flex;
+    }
+    .logo{
+        width: 20%;
+    }
+    .store{
+        border:1px solid #000;
+        width: 30%;
+        margin-left: 5em;
+        h3{
+            margin:0;
+            padding:0.6em;
+            line-height: 1.5;
+            width: 2em;
+            font-weight: normal;
+            border-right: 1px solid #000;
+        }
+    }
+    .title{
+        position: absolute;
+        top:1em;
+        right:0;
+        align-items: flex-end;
+        h1{
+            font-size: 72px;
+            margin:0;
+            line-height: 0.8em;
+        }
+        span{
+            display: inline-block;
+            width: 4.5em;
+            margin-left: 0.3em;
+            text-align: right;
+        }
+    }
+}
+table{
+    margin-top: 2em;
+    width: 100%;
+    border-collapse: collapse;
+    print-color-adjust: exact;
+    line-height: 1.5;
+    letter-spacing: 0.25em;
+    tr,td{
+        border: 1px solid #000;
+    }
+}
+
+//訂單基本資訊
+.table1{
+    td:nth-child(odd){
+        background-color: #ddd;
+        padding:1em 1.2em;
+        width:60pt;
+        text-align: center;
+    }
+}
+
+//備註
+.table2{
+    td{
+        padding:1em 0;
+    }
+    tr:first-child td{
+        background-color: #ddd;
+        text-align: center;
+    }
+    tr:last-child td{
+        height: 7em;
+    }
+}
+
+//配送說明
+ul{
+    padding-left: 1em;
+}
+
+//商品資訊
+.table3{
+    tr > td{
+        padding:2em 0.1em;
+        text-align: center;
+    }
+    tr.thead td{
+        color:#fff;
+        font-size: 18px;
+        font-weight: 700;
+        background-color:$product_color_3;
+    }
+    tr.thead td{
+        padding:0.5em 0;
+    }
+    .amount{
+        td{
+            padding: 0;
+            text-align: left;
+        }
+        div{
+            background-color:#ddd;
+            padding:0.5em 1em;
+            border-right: 1px solid #000;
+            display: inline-block;
+        }
+    }
+}
+//付款方式
+.table4{
+    text-align: center;
+    tr:first-child td{
+        font-size: 18px;
+        font-weight: 700;
+        padding:0.5em;
+    }
+    tr.col-2 td:first-child{
+        font-size: 18px;
+        font-weight: 700;
+        padding:0.5em 0;
+    }
+    tr td.gray{
+        background-color: #ddd;
+    }
+    td.brown{
+        background-color:$product_color_3;
+        color:#fff;
+    }
+    tr.col-4{
+        td{
+            position: relative;
+        }
+        td:nth-child(odd){
+            font-size: 18px;
+            font-weight: 700;
+            padding:1.5em 0;
+            width: 6em;
+        }       
+    }
+    .note{
+        background-color: #ddd;
+        position: absolute;
+        left:0;
+        top:1px;
+        margin:0;
+        padding:0;
+        text-indent: 0.5em;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid #000;
+    } 
+}
+
+// 售後服務規範
+.imgbox {
+    break-inside: avoid;
+    padding-top: 3em;
+}
+@page {
+    // size: A4 landscape;
+    margin: 0cm;
+}
+@media print {
+    .header-info{
+        .store{
+            margin-left: 2em;
+            h3{
+                line-height: 1;
+                padding:0.6em 0.6em 0.4em;
+            }
+        }
+        .title{
+            top:0.5em;
+            h1{
+                font-size: 40pt;
+            }
+        }
+    }
+    table{
+        font-size: 12pt;
+        margin-top: 1em;
+    }
+    .table1{
+        td:nth-child(odd){
+            padding:0.3em 0.4em;
+            width:60pt;
+        }
+    }
+    .table2{
+        td{
+            padding:0.3em 0;
+        }
+    }
+    ul{
+        font-size: 10pt;
+    }
+    .table3 {
+        tr > td{
+            padding:1em 0.5em;
+        }
+        tr:first-child td{
+            font-size: 13pt;
+        }        
+        tr.thead td{
+            padding:0.5em 0em;
+        }
+        .amount{
+            div{
+                padding:0.2em 0.5em;
+                letter-spacing: 0;
+            }
+        }
+    }
+    .table4{
+        tr:first-child td{
+            font-size: 13pt;
+        }
+        tr.col-2 td:first-child{
+            font-size: 13pt;
+        }
+        tr.col-2 td:first-child{
+            padding:0.5em 0;
+        }
+        tr.col-4 td:nth-child(odd){
+            padding:1em 0;
+        }
+        .note{
+            font-size: 7pt;
+            letter-spacing: 0;
+        }
+    }
+}

@@ -12,8 +12,8 @@
             <div class="product_sort">
                 <div class="container">
                     <select name="" id="">
-                        <option value="0" selected>依時間排序</option>
-                        <option value="1">依人氣排序</option>
+                        <option value="1" selected>依人氣排序</option>
+                        <option value="0">依時間排序</option>
                         <option value="2">價格低至高</option>
                         <option value="3">價格高至低</option>
                     </select>

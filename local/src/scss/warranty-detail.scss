@@ -145,7 +145,11 @@ $product_color_5: #e30400;
                 font-size: 18px;
                 @include mediaquery(null, 768px) {
                     font-size: 16px;
-                margin-right: 15px;
+                margin-right: 6px;
+                }
+                @include mediaquery(991px,null){
+                    display: block;
+                    margin-bottom: 0.2em;
                 }
             }
             .warranty_info {

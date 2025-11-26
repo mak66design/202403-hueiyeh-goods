@@ -1,0 +1,230 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  width: 90%;
+  margin: 40px auto;
+}
+
+.header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.header-info > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header-info .logo {
+  width: 20%;
+}
+.header-info .store {
+  border: 1px solid #000;
+  width: 30%;
+  margin-left: 5em;
+}
+.header-info .store h3 {
+  margin: 0;
+  padding: 0.6em;
+  line-height: 1.5;
+  width: 2em;
+  font-weight: normal;
+  border-right: 1px solid #000;
+}
+.header-info .title {
+  position: absolute;
+  top: 1em;
+  right: 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+.header-info .title h1 {
+  font-size: 72px;
+  margin: 0;
+  line-height: 0.8em;
+}
+.header-info .title span {
+  display: inline-block;
+  width: 4.5em;
+  margin-left: 0.3em;
+  text-align: right;
+}
+
+table {
+  margin-top: 2em;
+  width: 100%;
+  border-collapse: collapse;
+  -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+  line-height: 1.5;
+  letter-spacing: 0.25em;
+}
+table tr, table td {
+  border: 1px solid #000;
+}
+
+.table1 td:nth-child(odd) {
+  background-color: #ddd;
+  padding: 1em 1.2em;
+  width: 60pt;
+  text-align: center;
+}
+
+.table2 td {
+  padding: 1em 0;
+}
+.table2 tr:first-child td {
+  background-color: #ddd;
+  text-align: center;
+}
+.table2 tr:last-child td {
+  height: 7em;
+}
+
+ul {
+  padding-left: 1em;
+}
+
+.table3 tr > td {
+  padding: 2em 0.1em;
+  text-align: center;
+}
+.table3 tr.thead td {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  background-color: #94693c;
+}
+.table3 tr.thead td {
+  padding: 0.5em 0;
+}
+.table3 .amount td {
+  padding: 0;
+  text-align: left;
+}
+.table3 .amount div {
+  background-color: #ddd;
+  padding: 0.5em 1em;
+  border-right: 1px solid #000;
+  display: inline-block;
+}
+
+.table4 {
+  text-align: center;
+}
+.table4 tr:first-child td {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0.5em;
+}
+.table4 tr.col-2 td:first-child {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0.5em 0;
+}
+.table4 tr td.gray {
+  background-color: #ddd;
+}
+.table4 td.brown {
+  background-color: #94693c;
+  color: #fff;
+}
+.table4 tr.col-4 td {
+  position: relative;
+}
+.table4 tr.col-4 td:nth-child(odd) {
+  font-size: 18px;
+  font-weight: 700;
+  padding: 1.5em 0;
+  width: 6em;
+}
+.table4 .note {
+  background-color: #ddd;
+  position: absolute;
+  left: 0;
+  top: 1px;
+  margin: 0;
+  padding: 0;
+  text-indent: 0.5em;
+  width: 100%;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+.imgbox {
+  -webkit-column-break-inside: avoid;
+     -moz-column-break-inside: avoid;
+          break-inside: avoid;
+  padding-top: 3em;
+}
+
+@page {
+  margin: 0cm;
+}
+@media print {
+  .header-info .store {
+    margin-left: 2em;
+  }
+  .header-info .store h3 {
+    line-height: 1;
+    padding: 0.6em 0.6em 0.4em;
+  }
+  .header-info .title {
+    top: 0.5em;
+  }
+  .header-info .title h1 {
+    font-size: 40pt;
+  }
+  table {
+    font-size: 12pt;
+    margin-top: 1em;
+  }
+  .table1 td:nth-child(odd) {
+    padding: 0.3em 0.4em;
+    width: 60pt;
+  }
+  .table2 td {
+    padding: 0.3em 0;
+  }
+  ul {
+    font-size: 10pt;
+  }
+  .table3 tr > td {
+    padding: 1em 0.5em;
+  }
+  .table3 tr:first-child td {
+    font-size: 13pt;
+  }
+  .table3 tr.thead td {
+    padding: 0.5em 0em;
+  }
+  .table3 .amount div {
+    padding: 0.2em 0.5em;
+    letter-spacing: 0;
+  }
+  .table4 tr:first-child td {
+    font-size: 13pt;
+  }
+  .table4 tr.col-2 td:first-child {
+    font-size: 13pt;
+  }
+  .table4 tr.col-2 td:first-child {
+    padding: 0.5em 0;
+  }
+  .table4 tr.col-4 td:nth-child(odd) {
+    padding: 1em 0;
+  }
+  .table4 .note {
+    font-size: 7pt;
+    letter-spacing: 0;
+  }
+}

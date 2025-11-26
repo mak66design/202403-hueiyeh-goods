@@ -863,18 +863,119 @@
             }
         }
     }
+    .note{
+        @include font-size(12px,13.6px);
+        color:#C98B54;
+        letter-spacing: 0;
+        @include mediaquery($sm,null){            
+            margin-top: 0.75em;
+        }
+        @include mediaquery(null,$sm){
+            margin-top: 1em;
+            margin-bottom: 4em;
+        }
+    }
+    .file-upload{
+        position: relative;
+        display: flex;
+        align-items: center;
+        .controls {
+            display: none;
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+        }
+        .mpath{
+            word-break: break-all;
+            color:#a3a3a3;
+            position: relative;
+            margin-left: 1.2em;
+            padding-right: 2.5em;
+        }
+    }
+    .file-btn{
+        display: inline-block;
+        text-align: center;
+        flex:0 0 128px;
+        width: 128px;
+        height: 48px;
+        line-height: 48px;
+        border-radius: 6px;
+        color:white;
+        background-color: #94693C;
+        img{
+            width: 1.5em;
+            margin-left: 0.5em;
+            vertical-align: -0.4em;
+        }
+        @include mediaquery(null,$sm){
+            flex:0 0 105px;
+            width: 105px;
+            height: 32px;
+            line-height: 32px;
+            border-radius: 3px;
+            font-size: 14px;
+            img{
+                width: 1em;
+                margin-left: 4px;
+                vertical-align: -2px;
+            }
+        }
+    }
+    .delbtn{
+        width: 24px;
+        height: 24px;
+        display: none;
+        position: absolute;
+        right:0;
+        top:50%;
+        transform: translateY(-50%);
+        @include border();
+        background-color: #a3a3a3;
+        i:before,i:after{
+            transition: all .25s;
+            content: "";
+            position: absolute;
+            left:6px;
+            top:11px;
+            height: 2px;   
+            width: 12px;   
+            background-color: #fff;
+        }
+        i:before{
+            transform:rotate(45deg);                  
+        }
+        i:after{
+            transform: rotate(-45deg);
+        }
+    }
     .req {
         .m_title {
             b {
                 display: inline-block;
             }
         }
-        input:not([type="radio"]),
+        input:not([type="radio"],[type="file"]),
         select {
             border: 1px solid #d31e1b;
         }
+        &.form-order-block{
+            a{
+                margin-left: 0;
+                vertical-align: -2px;
+            }
+            @include mediaquery(null,$xs){
+                .m_title i{
+                    font-size: 12px;
+                }
+                .m_title b{
+                    display: none;
+                }
+            }
+        }
     }
-    input:not([type="radio"]),
+    input:not([type="radio"],[type="file"]),
     select {
         appearance: none;
         width: 100%;

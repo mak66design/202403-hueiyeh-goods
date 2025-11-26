@@ -61,7 +61,7 @@
                     <div class="form">
                         <ul class="form_title">
                             <li>登錄日期</li>
-                            <li>訂單編號</li>
+                            <li>通路訂單編號/ <i></i>發票號碼</li>
                             <li>購買產品</li>
                             <li>產品序號</li>
                             <li>購買通路</li>
@@ -75,7 +75,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -104,7 +104,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -133,7 +133,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -162,7 +162,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -191,7 +191,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -220,7 +220,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -249,7 +249,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -278,7 +278,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -307,7 +307,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>
@@ -336,7 +336,7 @@
                                 <div>2022.06.10</div>
                             </li>
                             <li>
-                                <div>訂單編號</div>
+                                <div>通路訂單編號/發票號碼</div>
                                 <div>HY220610034</div>
                             </li>
                             <li>

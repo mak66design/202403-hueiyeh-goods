@@ -407,12 +407,12 @@ header {
             }
         }
     }
-    .mo_link {
-        pointer-events: none;
-        @include mediaquery(null, 991px) {
-            pointer-events: all;
-        }
-    }
+    // .mo_link {
+    //     pointer-events: none;
+    //     @include mediaquery(null, 991px) {
+    //         pointer-events: all;
+    //     }
+    // }
     .store {
         position: absolute;
         flex-direction: column;

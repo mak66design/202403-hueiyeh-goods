@@ -78,7 +78,15 @@ function slider_ul_list(id) {
 
 
 // 彈跳視窗
-$('.m_title a').on('click', function () {
+$('.m_title a').on('click', function (e) {
+	let modalBtn = e.currentTarget.dataset.modal
+	if (modalBtn == "serial") {
+		$('#modalBgProduct .serial').css('display', 'block');
+		$('#modalBgProduct .order').css('display', 'none');
+	} else if (modalBtn == "order") {
+		$('#modalBgProduct .serial').css('display', 'none');
+		$('#modalBgProduct .order').css('display', 'block');
+	}
 	$('#modalBgProduct').css('display', 'block');
 	$('body').addClass('modal-open-product')
 	$('html, body').css('overflow', 'hidden')
@@ -100,16 +108,56 @@ innerProduct.addEventListener('click', function (e) {
 	e.stopPropagation();
 }, false);
 
-$('select').each(function(){
-	$(this).on('change', function(){
+$('select').each(function () {
+	$(this).on('change', function () {
 		let color = '#000'
 		$(this).css('color', color)
-		if($(this).hasClass('select_1')){
+		if ($(this).hasClass('select_1')) {
 			$(this).siblings().find('.chosen-single').css('color', color)
 		}
 	})
 })
 
-$('input[type="date"]').on('change', function(){
+$('input[type="date"]').on('change', function () {
 	$(this).css('color', '#000')
+})
+
+//訂單編號
+let radioText = $('input[type="text"].order_placeholder')
+$('input[type="radio"].order_placeholder').on('click', function (e) {
+	let orderRadio = e.currentTarget.id
+	if (orderRadio == 'orderNum') {
+		radioText.attr('placeholder', '請輸入訂單編號，上傳訂購憑證')
+	} else if (orderRadio == 'invoiceNum') {
+		radioText.attr('placeholder', '無訂單編號，上傳訂購憑證')
+	}
+})
+
+//檔案上傳
+$('.file-btn ').click(function () {
+	var m_id = $(this).data("id");
+	var $this = $("#" + m_id);
+	var mpath = $this.find('.mpath b');
+	$this.find("input").trigger('click');
+	$this.find("input").change(function () {
+		var filename = $(this).val().split('\\').pop();
+		var reader = new FileReader();
+		reader.readAsDataURL(this.files[0]);
+		if (this.files[0].size > 26214400) {
+			alert("圖片上傳大小不可超過25M");
+		} else {
+			reader.onload = function (e) {
+				$(mpath).text(filename);
+				$this.find('.delbtn').show();
+				$this.find('.file-btn').addClass('disabled');
+			}
+		};
+	});
+});
+$('.delbtn').on('click', function () {
+	var m_id = $(this).data("id");
+	$(this).hide();
+	$("#" + m_id).find('.mpath b').html('');
+	$("#" + m_id).find('input').val("");
+	$("#" + m_id).find('.file-btn').removeClass('disabled');
 })

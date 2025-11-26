@@ -7,13 +7,25 @@
         <div class="modalBgProduct" id="modalBgProduct" style="display: none">
             <div class="popupProduct" id="popupProduct">
                 <div class="modal-content">
-                    <div class="popupTitleWarranty">
-                        保固登錄產品序號位置示意圖
-                        <span>(靠近電線或是商品底座下方)</span>
+                    <!-- 20251124 調整 start -->
+                    <div class="serial">
+                        <div class="popupTitleWarranty">
+                            保固登錄產品序號位置示意圖
+                            <span>(靠近電線或是商品底座下方)</span>
+                        </div>
+                        <div class="imgWarranty">
+                            <img src="dist/images/page/warranty.jpg" alt="">
+                        </div>
                     </div>
-                    <div class="imgWarranty">
-                        <img src="dist/images/page/warranty.jpg" alt="">
+                    <div class="order">
+                        <div class="popupTitleWarranty">
+                            訂單編號/發票號碼 示意圖
+                        </div>
+                        <div class="imgWarranty">
+                            <img src="dist/images/page/orderNo.jpg" alt="">
+                        </div>
                     </div>
+                    <!-- 20251124 調整 end -->
                 </div>
                 <div class="closeIcon">
                     <img src="dist/images/productPage/close-bt.png">
@@ -103,7 +115,8 @@
                         <div class="rightBox">
                             <!-- 如果沒有填寫，則增加req -->
                             <div class="product">
-                                <div class="m_title"><span>*</span>購買產品 <a href="javascript:;">產品序號<i></i></a><b>必填</b></div>
+                                <!-- 20251124 調整 加入屬性 data-modal="serial" -->
+                                <div class="m_title"><span>*</span>購買產品 <a href="javascript:;" data-modal="serial">產品序號<i></i></a><b>必填</b></div>
                                 <div class="box">
                                     <div class="flex">
                                         <select name="" id="" class="select_1">
@@ -166,10 +179,40 @@
                             </div>
 
                             <!-- 如果沒有填寫，則增加req -->
-                            <div class="req">
-                                <div class="m_title"><span>*</span>購買通路訂單編號 / 發票號碼(以訂單編號優先)<b>必填</b></div>
-                                <input type="text" name="" id="" placeholder="請輸入訂單編號 / 發票號碼 二擇一">
+                            <!-- 20251124 調整 start -->
+                            <div class="req form-order-block">
+                                <div class="m_title">
+                                    <span>*</span>購買通路訂單編號 / 發票號碼<i>(以訂單編號優先)</i><a href="javascript:;" data-modal="order"><i></i></a><b>必填</b>
+                                </div>
+                                <ul class="radio">
+                                    <li>
+                                        <input type="radio" name="radio2" id="orderNum" class="order_placeholder" checked>
+                                        <label for="orderNum">通路訂單編號</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" name="radio2" id="invoiceNum" class="order_placeholder">
+                                        <label for="invoiceNum">發票號碼</label>
+                                    </li>
+                                </ul>
+                                <input type="text" name="" id="" placeholder="請輸入訂單編號 / 發票號碼 二擇一" class="order_placeholder">
                             </div>
+                            <div class="req">
+                                <div class="m_title">
+                                    <span>*</span>訂購憑證圖片上傳<b>必填</b>
+                                </div>
+                                <div class="file-upload" id="g-upload-1">
+                                    <div class="controls"><input type="file" name="" accept=".jpg,.jpeg,.heic,.png" /></div>
+                                    <a href="javascript:;" class="file-btn" data-id="g-upload-1">
+                                        選擇檔案<img src="dist/images/page/addH.png">
+                                    </a>
+                                    <div class="mpath">
+                                        <b></b>
+                                        <a href="javascript:;" class="delbtn" data-id="g-upload-1"><i></i></a>
+                                    </div>
+                                </div>
+                                <div class="note">※最多上傳1張，支持格式JPG、JPEG、HEIC、PNG格式，圖片大小控制在25M以內</div>
+                            </div>
+                            <!-- 20251124 調整 end -->
                         </div>
                         <div class="rightBox">
                             <div class="m_title">其他建議</div>

@@ -60,7 +60,7 @@
                             <div class="item_menu_Box">
                                 <ul class="item_menu_list slides">
                                     <li class="active">
-                                        <a href="javascript:;">生活家電</a>
+                                        <a href="javascript:;">全部</a>
                                     </li>
                                     <li>
                                         <a href="javascript:;">按摩墊</a>
@@ -186,8 +186,8 @@
                         </div>
                     </div>
                     <select name="" id="">
-                        <option value="0" selected>依時間排序</option>
-                        <option value="1">依人氣排序</option>
+                        <option value="1" selected>依人氣排序</option>
+                        <option value="0">依時間排序</option>
                         <option value="2">價格低至高</option>
                         <option value="3">價格高至低</option>
                     </select>

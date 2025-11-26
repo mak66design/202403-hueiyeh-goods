@@ -21,13 +21,13 @@
                         <div class="item_Menu">
                             <div class="item_menu_Box">
                                 <ul class="item_menu_list slides">
-                                    <li >
+                                    <li>
                                         <a href="flagship-store.php">輝葉良品旗艦店</a>
                                     </li>
                                     <li>
                                         <a href="location.php">實體門市</a>
                                     </li>
-                                    <li  class="active">
+                                    <li class="active">
                                         <a href="javascript:;">輝葉餐飲集團</a>
                                     </li>
                                     <li>
@@ -70,9 +70,9 @@
                     </select>
                 </div>
             </div>
-            <div class="intro container">
+            <!-- <div class="intro container">
                 展示商品會依各門市特色做調整，建議前往體驗前，請先致電門市洽詢
-            </div>
+            </div> -->
             <div class="contentList container">
                 <div class="box">
                     <div class="city">基隆市</div>

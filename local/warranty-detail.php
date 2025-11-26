@@ -70,7 +70,7 @@
                                         2022.04.18
                                     </div>
                                     <div class="num">
-                                        <span class="info_title">訂單編號</span>
+                                        <span class="info_title">通路訂單編號/發票號碼</span>
                                         HY220610034
                                     </div>
                                     <div class="location">
@@ -102,11 +102,15 @@
     ?>
     <script src="dist/js/main.js"></script>
     <script>
-        window.onload = function() {
-            var eventInfoElement = document.getElementById('event_info');
-            var offsetTop = eventInfoElement.offsetTop;
-            window.scrollTo(0, offsetTop - 20);
-        };
+        const hashFragment = window.location.hash;
+        if (hashFragment == "#event_info") {
+            window.onload = function() {
+                var eventInfoElement = document.getElementById('event_info');
+                var offsetTop = eventInfoElement.offsetTop;
+                window.scrollTo(0, offsetTop - 20);
+            };
+
+        }
     </script>
     <script>
         document.querySelector('.back-btn').onclick = function() {

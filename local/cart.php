@@ -403,6 +403,7 @@
                                                 <input type="text" id="phone" name="phone" placeholder="請填寫地址" />
                                             </div>
                                         </div>
+                                        <div><a href="faq.php">離島及偏遠地區運費說明</a></div>
                                     </li>
                                     <li class="personal_data">
                                         <!-- 非必填會加上 class:optional -->

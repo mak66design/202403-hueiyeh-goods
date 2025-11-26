@@ -1069,6 +1069,14 @@ $product_color_5: #e30400;
                         font-weight: 400;
                         color: #000;
                         width: calc(50% - 12px);
+                        a{
+                            font-weight: 500;
+                            color:#94693c;
+                            display: inline-block;
+                            border-bottom: 1px solid #94693c;
+                            margin-top: 0.75em;
+                            @include font-size(15px,16px);
+                        }
                         @include mediaquery(null, 991px) {
                             flex-direction: column;
                             width: 100%;
