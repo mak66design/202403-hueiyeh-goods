@@ -19,6 +19,9 @@
                             <div class="item_menu_Box">
                                 <ul class="item_menu_list slides">
                                     <li class="active">
+                                        <a href="javascript:;">全部</a>
+                                    </li>
+                                    <li>
                                         <a href="javascript:;">生活家電</a>
                                     </li>
                                     <li>
